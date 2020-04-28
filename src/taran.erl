@@ -164,7 +164,7 @@ send(Conn, Code, Body) ->
     body => Body},
 
   case get_conn_pid(Conn) of
-    {ok, Pid} -> taran_socket_holder:req(Pid, Req, 10*1000);
+    {ok, Pid} -> taran_socket_holder:req(Pid, Req, 20*1000);
     Else -> Else
   end.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
